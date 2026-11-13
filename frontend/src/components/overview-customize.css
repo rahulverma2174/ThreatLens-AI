@@ -1,0 +1,68 @@
+.widget-customize-backdrop {
+  position: fixed;
+  z-index: 1190;
+  inset: var(--customize-header-offset, 64px) 0 0;
+  background: #030813a8;
+  backdrop-filter: blur(2px);
+}
+.widget-customize {
+  position: fixed;
+  z-index: 1191;
+  inset: var(--customize-header-offset, 64px) 0 0 auto;
+  display: flex;
+  width: min(440px, calc(100vw - 32px));
+  max-width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 22px max(20px, env(safe-area-inset-bottom));
+  border: 1px solid var(--soc-border-strong);
+  border-top: 0;
+  border-right: 0;
+  border-radius: var(--soc-radius-md) 0 0 0;
+  color: var(--soc-text);
+  background: linear-gradient(155deg, #111d2d 0%, #0d1522 58%, #0b121e 100%);
+  box-shadow: -22px 20px 70px #0009, inset 1px 0 #ffffff08;
+}
+.widget-customize-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 0 19px;
+  border-bottom: 1px solid var(--soc-border);
+}
+.widget-customize-head > div { display: grid; gap: 7px; }
+.widget-customize-kicker { color: var(--soc-accent); font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.widget-customize-head strong { color: var(--soc-text); font-size: 18px; font-weight: 630; letter-spacing: -.02em; }
+.widget-customize-head small { color: var(--soc-text-muted); font-size: 12px; line-height: 1.5; }
+.widget-customize-head .icon-quiet { flex: 0 0 40px; width: 40px; height: 40px; border-color: var(--soc-border); border-radius: var(--soc-radius-sm); color: var(--soc-text-secondary); background: #111d2b; }
+.widget-customize-head .icon-quiet:hover { border-color: var(--soc-border-strong); color: var(--soc-accent); background: var(--soc-surface-raised); }
+.widget-customize-list { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: var(--soc-border-strong) transparent; }
+.widget-config-row { display: flex; min-height: 58px; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid color-mix(in srgb, var(--soc-border) 65%, transparent); }
+.widget-config-row label { display: flex; min-width: 0; align-items: center; gap: 11px; color: var(--soc-text-secondary); font-size: 13px; line-height: 1.4; cursor: pointer; }
+.widget-config-row label span { overflow-wrap: anywhere; }
+.widget-config-row input { flex: 0 0 auto; width: 17px; height: 17px; accent-color: var(--soc-accent); cursor: pointer; }
+.widget-config-row > div { display: flex; flex: 0 0 auto; gap: 5px; }
+.widget-config-row button { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid transparent; border-radius: var(--soc-radius-sm); color: var(--soc-text-muted); background: transparent; cursor: pointer; transition: color .15s ease, border-color .15s ease, background-color .15s ease; }
+.widget-config-row button:hover:not(:disabled) { border-color: var(--soc-border-strong); color: var(--soc-accent); background: var(--soc-surface-raised); }
+.widget-config-row button:disabled { color: var(--soc-text-subtle); opacity: .38; cursor: not-allowed; }
+.widget-customize-note { flex: 0 0 auto; margin: 0; padding-top: 14px; border-top: 1px solid var(--soc-border); color: var(--soc-text-muted); font-size: 11px; line-height: 1.5; }
+@media (min-width: 1920px) { .widget-customize-backdrop { --customize-header-offset: 68px; } .widget-customize { --customize-header-offset: 68px; } }
+@media (max-width: 767px) {
+  .widget-customize-backdrop, .widget-customize { --customize-header-offset: 58px; }
+  .widget-customize {
+    inset: var(--customize-header-offset, 58px) 0 0 auto;
+    width: min(460px, calc(100vw - 16px));
+    padding-inline: 18px;
+    border-radius: var(--soc-radius-md) 0 0 0;
+  }
+  .widget-customize-head .icon-quiet { flex-basis: 44px; width: 44px; height: 44px; }
+  .widget-config-row button { width: 44px; height: 44px; }
+}
+@media (max-width: 375px) {
+  .widget-customize { width: 100vw; padding-inline: 15px; border-left: 0; border-radius: 0; }
+  .widget-customize-head { padding-top: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .widget-config-row button { transition: none; }
+}

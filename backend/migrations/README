@@ -1,0 +1,11 @@
+ThreatLens database migrations
+==============================
+
+The baseline revision is for a new, empty database only. Future PostgreSQL
+deployments must configure THREATLENS_DATABASE_URL and run:
+
+    alembic upgrade head
+
+Do not use the baseline to upgrade an existing SQLite database or to migrate
+its data. Existing local SQLite startup initialization and its handwritten
+additive migrations remain in place.

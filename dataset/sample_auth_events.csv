@@ -1,0 +1,15 @@
+timestamp,username,source_ip,event_type,status,user_agent
+2026-11-11T09:00:00Z,alex,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:01:00Z,alex,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:02:00Z,alex,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:03:00Z,alex,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:04:00Z,alex,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:05:00Z,alex,198.51.100.24,login,success,ThreatLens synthetic dataset
+2026-11-11T09:06:00Z,admin,198.51.100.24,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:07:00Z,student1,203.0.113.17,login,success,ThreatLens synthetic dataset
+2026-11-11T09:12:00Z,student2,203.0.113.18,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:14:00Z,student2,203.0.113.18,login,success,ThreatLens synthetic dataset
+2026-11-11T09:25:00Z,faculty,192.0.2.41,login,success,ThreatLens synthetic dataset
+2026-11-11T09:34:00Z,alex,203.0.113.77,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:35:00Z,admin,203.0.113.77,login,failure,ThreatLens synthetic dataset
+2026-11-11T09:36:00Z,guest,203.0.113.77,login,failure,ThreatLens synthetic dataset
